@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import nuevo_familiar
+from .views import familiares, crear_familiar
 
 urlpatterns = [
-    path('familiares.html', familiares)
-    path('nuevo-familiar', nuevo_familiar)
+    path('familiares/', familiares),
+    path('nuevo-familiar/', crear_familiar)
 ]

@@ -56,7 +56,7 @@ ROOT_URLCONF = 'clase18ejercicio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'/home/pablo/projects_vm/coderpython_vm/clase18ejercicio/index/templates'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

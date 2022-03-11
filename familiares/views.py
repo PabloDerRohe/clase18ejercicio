@@ -1,10 +1,9 @@
-from datetime import datetime
 from django.shortcuts import render
 from django.http import HttpResponse
-
-from .models import Familiar
+from familiares.models import Familiar
 
 # Create your views here.
+
 
 def familiares(request):
     
@@ -12,11 +11,16 @@ def familiares(request):
     
     return render(request, 'familiares.html', datos)
 
-def nuevo_familiar(request):
-    nuevo_familiar = Familiar(
-        nombre='Celia',
-        apellido='Arcucci',
-        edad = 30,
+
+def crear_familiar(request):
+    
+    crear_familiar = Familiar(
+        nombre='Rambo',
+        apellido='Arcucci-Marelli',
+        edad = 0,
+        hobby = 'Morder a Fili'
     )
-    return HttpResponse(f'Familiar agregado {nuevo_familiar.nombre} {nuevo_familiar.apellido}')
+    crear_familiar.save()
+    
+    return HttpResponse(f'Familiar agregado {crear_familiar.nombre} {crear_familiar.apellido}')
 
